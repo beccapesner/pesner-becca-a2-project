@@ -10,7 +10,9 @@ namespace MohawkGame2D;
 /// </summary>
 public class Game
 {
-    // Place your variables here:\
+    // Place your variables here:
+
+    //Colour variables
     Color almostBlack = new Color("030206");
     Color deepestBlue = new Color("070918");
     Color deepBlue = new Color("0f052d");
@@ -20,10 +22,13 @@ public class Game
     Color teal = new Color("36868f");
     Color green = new Color("5fc75d");
     Color neonGreen = new Color("83c16f");
+
+    //Star variables
     int starCount = 40;
     int[] starPositionsX;
     int[] starPositionsY;
 
+    //Dock variables
 
     /// <summary>
     ///     Setup runs once before the game loop begins.
@@ -64,17 +69,17 @@ public class Game
         // Added outlines for waves? 
         Draw.LineColor = Color.Black;   // Lines and outline of shape will be black
         Draw.LineSize = 1;              // Lines and outline will be 1 pixel thick
-        
-        
+
+
         //Draw dock platform
-       
+     
 
 
         //Draw dock pillars
 
 
 
-        //Draw background waves
+    //Draw background waves
         Draw.FillColor = navy;
         for (int i = 0; i < 16; i++)
         {
