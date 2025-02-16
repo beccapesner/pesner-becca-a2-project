@@ -61,6 +61,19 @@ public class Game
             Draw.Circle(starPositionsX[i], starPositionsY[i], 2);
         }
 
+        // Added outlines for waves? 
+        Draw.LineColor = Color.Black;   // Lines and outline of shape will be black
+        Draw.LineSize = 1;              // Lines and outline will be 1 pixel thick
+        
+        
+        //Draw dock platform
+       
+
+
+        //Draw dock pillars
+
+
+
         //Draw background waves
         Draw.FillColor = navy;
         for (int i = 0; i < 16; i++)
