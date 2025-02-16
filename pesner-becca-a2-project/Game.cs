@@ -28,7 +28,7 @@ public class Game
     int[] starPositionsX;
     int[] starPositionsY;
 
-    //Dock variables
+    //Dock variables???
 
 
     /// <summary>
