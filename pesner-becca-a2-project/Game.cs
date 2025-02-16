@@ -30,6 +30,7 @@ public class Game
 
     //Dock variables
 
+
     /// <summary>
     ///     Setup runs once before the game loop begins.
     /// </summary>
@@ -64,27 +65,16 @@ public class Game
         for (int i = 0; i < starCount; i++)
         {
             Draw.Circle(starPositionsX[i], starPositionsY[i], 2);
+            Draw.LineSize = 1;
         }
 
-        // Added outlines for waves? 
-        Draw.LineColor = Color.Black;   // Lines and outline of shape will be black
-        Draw.LineSize = 1;              // Lines and outline will be 1 pixel thick
-
-
-        //Draw dock platform
-     
-
-
-        //Draw dock pillars
-
-
-
-    //Draw background waves
+        //Draw background waves
         Draw.FillColor = navy;
         for (int i = 0; i < 16; i++)
         {
             int x = 12 + i * 25;
             Draw.Circle(x, Window.Height - 100, 19);
+            Draw.LineSize = 1;
         }
 
         //Draw midground waves
@@ -93,6 +83,7 @@ public class Game
         {
             int x = 25 + i * 50;
             Draw.Circle(x, Window.Height - 65, 38);
+            Draw.LineSize = 1;
         }
 
         //Draw foreground waves
@@ -101,6 +92,25 @@ public class Game
         {
             int x = 50 + i * 100;
             Draw.Circle(x, Window.Height, 75);
+            Draw.LineSize = 1;
         }
+
+        //Draw dock platform
+        Vector2 startPos = new Vector2(0, 240);
+        Vector2 endPos = new Vector2(200, 240);
+        Draw.FillColor = Color.White;
+        Draw.LineSize = 10;
+        Draw.Line(startPos.X, startPos.Y, endPos.X, endPos.Y);
+
+
+        //Draw dock platform
+
+
+        //Draw dock pillars
+
+
+        //Draw dock pillars
+
+
     }
 }
