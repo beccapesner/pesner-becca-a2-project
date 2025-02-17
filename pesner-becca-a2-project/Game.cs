@@ -29,9 +29,6 @@ public class Game
     Color currentWaveColor3 = new Color("3afffb"); // neonBlue
     Color currentWaveColor4 = new Color("83c16f"); // neonGreen
 
-    int waveColorIndexes = 0;
-    Color[] waveColors = { Color.Blue, Color.Green, Color.Red, Color.Yellow };
-    
 
     //Star variables
     int starCount = 40;
@@ -91,63 +88,26 @@ public class Game
 
         // Only change the color if the space bar is pressed
         //changing colours of waves - troubleshooting
+        if (hasPressedSpacebar)
 
-        // Change Color of Circle when Enter is pressed
-        if (Input.IsKeyboardKeyPressed(KeyboardInput.Enter))
         {
-            wavecolorIndexes = (wavecolorIndexes + 1) % waveColors.Length; // Cycle through the colors
+            if (currentWaveColor == deepBlue)
+            {
+                currentWaveColor = teal; return;
+            }
+            if (currentWaveColor2 == teal)
+            {
+                currentWaveColor2 = neonBlue; return;
+            }
+            if (currentWaveColor3 == neonBlue)
+            {
+                currentWaveColor3 = neonGreen; return;
+            }
+            if (currentWaveColor4 == neonGreen)
+            {
+                currentWaveColor3 = deepBlue; return;
+            }
         }
-
-        //if (hasPressedSpacebar)
-
-        //{
-        //    if (currentWaveColor == deepBlue)
-        //    {
-        //        currentWaveColor = teal; return;
-        //    }
-        //    if (currentWaveColor2 == teal)
-        //    {
-        //        currentWaveColor2 = neonBlue; return;
-        //    }
-        //    if (currentWaveColor3 == neonBlue)
-        //    {
-        //        currentWaveColor3 = neonGreen; return;
-        //    }
-        //    if (currentWaveColor4 == neonGreen)
-        //    {
-        //        currentWaveColor3 = deepBlue; return;
-        //    }
-        //}
-
-        //// weeeeee Colors to cycle through
-        //Color[] waveColors = { deepBlue, teal, neonBlue, neonGreen };
-
-        //// Indexes for each wave color
-        //int[] waveColorIndexes = { 0, 1, 2, 3 };
-
-        //// Check if the space bar is pressed (getting player input)
-        //bool hasPressedSpacebar = Input.IsKeyboardKeyPressed(KeyboardInput.Space);
-
-        //if (hasPressedSpacebar)
-        //{
-        //    // Cycle through the colors for each wave
-        //    for (int i = 0; i < waveColorIndexes.Length; i++)
-        //    {
-        //        // Update each wave color based on its index
-        //        waveColorIndexes[i] = (waveColorIndexes[i] + 1) % waveColors.Length;
-
-        //        // Assign the new color to the wave
-        //        if (i == 0)
-        //            currentWaveColor = waveColors[waveColorIndexes[i]];
-        //        else if (i == 1)
-        //            currentWaveColor2 = waveColors[waveColorIndexes[i]];
-        //        else if (i == 2)
-        //            currentWaveColor3 = waveColors[waveColorIndexes[i]];
-        //        else if (i == 3)
-        //            currentWaveColor4 = waveColors[waveColorIndexes[i]];
-        //    }
-        //}
-
 
         // Draw furthest background waves
         Draw.FillColor = currentWaveColor4; // deepestBlue
@@ -179,16 +139,6 @@ public class Game
             Draw.Circle(x, Window.Height - 65, 38);
         }
 
-        // Draw foreground waves
-        Draw.FillColor = currentWaveColor; // deepBlue 
-        Draw.LineColor = almostBlack;
-        Draw.LineSize = 1;
-        for (int i = 0; i < 4; i++)
-        {
-            int x = 50 + i * 100;
-            Draw.Circle(x, Window.Height, 75);
-        }
-
         //Draw rectangle for dock instead cause lines kinda look goofy
         //Draw dock platform
         Draw.FillColor = neonGreen;
@@ -213,6 +163,16 @@ public class Game
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         Draw.Rectangle(0, 240, 15, 240);
+
+        // Draw foreground waves
+        Draw.FillColor = currentWaveColor; // deepBlue 
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
+        for (int i = 0; i < 4; i++)
+        {
+            int x = 50 + i * 100;
+            Draw.Circle(x, Window.Height, 75);
+        }
 
     }
 }
