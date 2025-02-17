@@ -62,6 +62,7 @@ public class Game
 
         //Draw stars
         Draw.FillColor = neonBlue;
+        Draw.LineColor = deepestBlue;
         for (int i = 0; i < starCount; i++)
         {
             Draw.Circle(starPositionsX[i], starPositionsY[i], 2);
@@ -86,6 +87,27 @@ public class Game
             Draw.LineSize = 1;
         }
 
+        //Draw dock platform
+        Vector2 startPos = new Vector2(0, 240);
+        Vector2 endPos = new Vector2(200, 240);
+        //Draw.FillColor = Color.White;
+        //Draw.LineColor = Color.White;
+        Draw.LineColor = Color.White;
+        Draw.LineSize = 10;
+        Draw.Line(startPos.X, startPos.Y, endPos.X, endPos.Y);
+        //Draw.FillColor = Color.White;
+
+        //Draw.Rectangle(0, 240, 200, 25);
+
+        //Draw dock platform
+
+
+        //Draw dock pillars
+
+
+        //Draw dock pillars
+
+
         //Draw foreground waves
         Draw.FillColor = deepBlue;
         for (int i = 0; i < 4; i++)
@@ -94,22 +116,6 @@ public class Game
             Draw.Circle(x, Window.Height, 75);
             Draw.LineSize = 1;
         }
-
-        //Draw dock platform
-        Vector2 startPos = new Vector2(0, 240);
-        Vector2 endPos = new Vector2(200, 240);
-        Draw.FillColor = Color.White;
-        Draw.LineSize = 10;
-        Draw.Line(startPos.X, startPos.Y, endPos.X, endPos.Y);
-
-
-        //Draw dock platform
-
-
-        //Draw dock pillars
-
-
-        //Draw dock pillars
 
 
     }
