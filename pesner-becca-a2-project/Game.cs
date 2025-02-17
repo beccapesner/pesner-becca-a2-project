@@ -16,8 +16,8 @@ public class Game
     Color almostBlack = new Color("030206");
     Color deepestBlue = new Color("070918");
     Color deepBlue = new Color("0f052d");
-    Color navy = new Color("203671");
-    Color babyBlue = new Color("36b5f5");
+    //Color navy = new Color("203671");
+    //Color babyBlue = new Color("36b5f5");
     Color neonBlue = new Color("3afffb");
     Color teal = new Color("36868f");
     Color green = new Color("5fc75d");
@@ -78,8 +78,8 @@ public class Game
         }
 
         // Making the waves cycle through colours when the user presses spacebar
-
-        // Check if the space bar is pressed
+       
+        // Check if the space bar is pressed (getting player input)
         bool hasPressedSpacebar = Input.IsKeyboardKeyPressed(KeyboardInput.Space);
 
         // Only change the color if the space bar is pressed
@@ -88,15 +88,15 @@ public class Game
             // Change the color to the next one in the sequence
             if (currentWaveColor == deepBlue)
             {
-                currentWaveColor = teal;
+                currentWaveColor = teal; return;
             }
             else if (currentWaveColor == teal)
             {
-                currentWaveColor = neonBlue;
+                currentWaveColor = neonBlue; return;
             }
             else if (currentWaveColor == neonBlue)
             {
-                currentWaveColor = deepBlue;
+                currentWaveColor = deepBlue; return;
             }
         }
 
@@ -167,3 +167,6 @@ public class Game
 
     }
 }
+
+// adding a fish to that follows the mouse
+//Vector2 position = Input.GetMousePosition();
