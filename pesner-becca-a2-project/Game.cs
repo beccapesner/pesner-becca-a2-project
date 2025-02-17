@@ -62,8 +62,8 @@ public class Game
         //Draw moon
         Draw.FillColor = neonBlue;
         Draw.LineColor = almostBlack;
-        Draw.LineSize = 1;
-        Draw.Circle(320, 60, 50);
+        Draw.LineSize = 3;
+        Draw.Circle(320, 80, 50);
 
         //Draw stars
         Draw.FillColor = neonBlue;
@@ -74,6 +74,7 @@ public class Game
             Draw.LineSize = 3;
         }
 
+        //// AAAAAAAAAAAAAAAAAAAAAAAA
         //// Declare a variable to store the current wave color
         //Color currentWaveColor = deepBlue;
 
