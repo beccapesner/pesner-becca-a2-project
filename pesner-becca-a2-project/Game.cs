@@ -71,22 +71,22 @@ public class Game
 
         //Draw background waves
         Draw.FillColor = navy;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
         for (int i = 0; i < 16; i++)
         {
             int x = 12 + i * 25;
             Draw.Circle(x, Window.Height - 100, 19);
-            Draw.LineColor = almostBlack;
-            Draw.LineSize = 1;
         }
 
         //Draw midground waves
         Draw.FillColor = teal;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
         for (int i = 0; i < 8; i++)
         {
             int x = 25 + i * 50;
             Draw.Circle(x, Window.Height - 65, 38);
-            Draw.LineColor = almostBlack;
-            Draw.LineSize = 1;
         }
 
         //Draw dock platform
@@ -108,12 +108,12 @@ public class Game
 
         //Draw foreground waves
         Draw.FillColor = deepBlue;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
         for (int i = 0; i < 4; i++)
         {
             int x = 50 + i * 100;
             Draw.Circle(x, Window.Height, 75);
-            Draw.LineColor = almostBlack;
-            Draw.LineSize = 1;
         }
 
 
