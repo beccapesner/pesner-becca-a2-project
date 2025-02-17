@@ -29,8 +29,9 @@ public class Game
     Color currentWaveColor3 = new Color("3afffb"); // neonBlue
     Color currentWaveColor4 = new Color("83c16f"); // neonGreen
 
-    Color[] waveColors = { deepBlue, teal, neonBlue, neonGreen };
-    int[] waveColorIndexes = { 0, 1, 2, 3 };
+    int waveColorIndexes = 0;
+    Color[] waveColors = { Color.Blue, Color.Green, Color.Red, Color.Yellow };
+    
 
     //Star variables
     int starCount = 40;
@@ -90,26 +91,33 @@ public class Game
 
         // Only change the color if the space bar is pressed
         //changing colours of waves - troubleshooting
-        if (hasPressedSpacebar)
 
+        // Change Color of Circle when Enter is pressed
+        if (Input.IsKeyboardKeyPressed(KeyboardInput.Enter))
         {
-            if (currentWaveColor == deepBlue)
-            {
-                currentWaveColor = teal; return;
-            }
-            if (currentWaveColor2 == teal)
-            {
-                currentWaveColor2 = neonBlue; return;
-            }
-            if (currentWaveColor3 == neonBlue)
-            {
-                currentWaveColor3 = neonGreen; return;
-            }
-            if (currentWaveColor4 == neonGreen)
-            {
-                currentWaveColor3 = deepBlue; return;
-            }
+            wavecolorIndexes = (wavecolorIndexes + 1) % waveColors.Length; // Cycle through the colors
         }
+
+        //if (hasPressedSpacebar)
+
+        //{
+        //    if (currentWaveColor == deepBlue)
+        //    {
+        //        currentWaveColor = teal; return;
+        //    }
+        //    if (currentWaveColor2 == teal)
+        //    {
+        //        currentWaveColor2 = neonBlue; return;
+        //    }
+        //    if (currentWaveColor3 == neonBlue)
+        //    {
+        //        currentWaveColor3 = neonGreen; return;
+        //    }
+        //    if (currentWaveColor4 == neonGreen)
+        //    {
+        //        currentWaveColor3 = deepBlue; return;
+        //    }
+        //}
 
         //// weeeeee Colors to cycle through
         //Color[] waveColors = { deepBlue, teal, neonBlue, neonGreen };
