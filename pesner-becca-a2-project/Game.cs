@@ -57,15 +57,15 @@ public class Game
     public void Update()
     {
         //Draw sky
-        Window.ClearBackground(almostBlack);
+        Window.ClearBackground(deepestBlue);
 
         //Draw stars
         Draw.FillColor = neonBlue;
-        Draw.LineColor = deepestBlue;
+        Draw.LineColor = green;
         for (int i = 0; i < starCount; i++)
         {
-            Draw.Circle(starPositionsX[i], starPositionsY[i], 2);
-            Draw.LineSize = 1;
+            Draw.Circle(starPositionsX[i], starPositionsY[i], 1);
+            Draw.LineSize = 3;
         }
 
         //// Declare a variable to store the current wave color
@@ -205,20 +205,29 @@ public class Game
         //Draw.Line(startPos6.X, startPos6.Y, endPos6.X, endPos6.Y);
 
         //Draw rectangle for dock instead cause lines kinda look goofy
-
         //Draw dock platform
         Draw.FillColor = neonGreen;
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         Draw.Rectangle(0, 245, 200, 15);
 
-
-        //Draw dock pillars T_T idk what i'm doing wrong
+        //Draw right dock pillar
         Draw.FillColor = neonGreen;
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         Draw.Rectangle(180, 240, 15, 240);
-       
+
+        //Draw middle dock pillar
+        Draw.FillColor = neonGreen;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
+        Draw.Rectangle(90, 240, 15, 240);
+
+        //Draw left dock pillar
+        Draw.FillColor = neonGreen;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
+        Draw.Rectangle(0, 240, 15, 240);
 
         //Draw foreground waves
         Draw.FillColor = deepBlue;
