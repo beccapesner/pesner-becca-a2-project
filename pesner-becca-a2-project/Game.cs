@@ -59,6 +59,12 @@ public class Game
         //Draw sky
         Window.ClearBackground(deepestBlue);
 
+        //Draw moon
+        Draw.FillColor = neonBlue;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
+        Draw.Circle(320, 60, 50);
+
         //Draw stars
         Draw.FillColor = neonBlue;
         Draw.LineColor = green;
