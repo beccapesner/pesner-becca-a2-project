@@ -24,7 +24,7 @@ public class Game
     Color neonGreen = new Color("83c16f");
 
     // Declare a variable to store the current wave color
-    Color currentWaveColor = new Color("0f052d");
+    Color currentWaveColor = deepBlue;
 
     //Star variables
     int starCount = 40;
