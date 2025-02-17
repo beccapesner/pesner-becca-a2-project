@@ -77,10 +77,7 @@ public class Game
             Draw.LineSize = 3;
         }
 
-        // Making the waves change colour when the user presses spacebar
-
-        //// Declare a variable to store the current wave color
-        //Color currentWaveColor = deepBlue;
+        // Making the waves cycle through colours when the user presses spacebar
 
         // Check if the space bar is pressed
         bool hasPressedSpacebar = Input.IsKeyboardKeyPressed(KeyboardInput.Space);
@@ -143,36 +140,6 @@ public class Game
             Draw.Circle(x, Window.Height, 75);
         }
 
-        ////Draw furthest background waves
-        //Draw.FillColor = deepBlue;
-        //Draw.LineColor = almostBlack;
-        //Draw.LineSize = 1;
-        //for (int i = 0; i < 35; i++)
-        //{
-        //    int x = 6 + i * 12;
-        //    Draw.Circle(x, Window.Height - 120, 14);
-        //}
-
-        ////Draw background waves
-        //Draw.FillColor = navy;
-        //Draw.LineColor = almostBlack;
-        //Draw.LineSize = 1;
-        //for (int i = 0; i < 16; i++)
-        //{
-        //    int x = 12 + i * 25;
-        //    Draw.Circle(x, Window.Height - 100, 19);
-        //}
-
-        ////Draw midground waves
-        //Draw.FillColor = teal;
-        //Draw.LineColor = almostBlack;
-        //Draw.LineSize = 1;
-        //for (int i = 0; i < 8; i++)
-        //{
-        //    int x = 25 + i * 50;
-        //    Draw.Circle(x, Window.Height - 65, 38);
-        //}
-
         //Draw rectangle for dock instead cause lines kinda look goofy
         //Draw dock platform
         Draw.FillColor = neonGreen;
@@ -197,17 +164,6 @@ public class Game
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         Draw.Rectangle(0, 240, 15, 240);
-
-        ////Draw foreground waves
-        //Draw.FillColor = deepBlue;
-        //Draw.LineColor = almostBlack;
-        //Draw.LineSize = 1;
-        //for (int i = 0; i < 4; i++)
-        //{
-        //    int x = 50 + i * 100;
-        //    Draw.Circle(x, Window.Height, 75);
-        //}
-
 
     }
 }
