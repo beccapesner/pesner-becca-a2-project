@@ -69,6 +69,16 @@ public class Game
             Draw.LineSize = 1;
         }
 
+        //Draw furthest background waves
+        Draw.FillColor = deepBlue;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
+        for (int i = 0; i < 35; i++)
+        {
+            int x = 6 + i * 12;
+            Draw.Circle(x, Window.Height - 120, 14);
+        }
+
         //Draw background waves
         Draw.FillColor = navy;
         Draw.LineColor = almostBlack;
@@ -95,15 +105,48 @@ public class Game
         Draw.LineColor = neonGreen;
         Draw.LineSize = 10;
         Draw.Line(startPos.X, startPos.Y, endPos.X, endPos.Y);
-        
 
-        //Draw dock platform
-
+        //Draw dock platform part 2
+        Vector2 startPos2 = new Vector2(0, 260);
+        Vector2 endPos2 = new Vector2(200, 260);
+        Draw.LineColor = neonGreen;
+        Draw.LineSize = 10;
+        Draw.Line(startPos2.X, startPos2.Y, endPos2.X, endPos2.Y);
 
         //Draw dock pillars
-
+        Vector2 startPos3 = new Vector2(80, 260);
+        Vector2 endPos3 = new Vector2(80, 400);
+        Draw.LineColor = neonGreen;
+        Draw.LineSize = 10;
+        Draw.Line(startPos3.X, startPos3.Y, endPos3.X, endPos3.Y);
 
         //Draw dock pillars
+        Vector2 startPos4 = new Vector2(100, 260);
+        Vector2 endPos4 = new Vector2(100, 400);
+        Draw.LineColor = neonGreen;
+        Draw.LineSize = 10;
+        Draw.Line(startPos4.X, startPos4.Y, endPos4.X, endPos4.Y);
+
+        //Draw dock pillars
+        Vector2 startPos5 = new Vector2(180, 260);
+        Vector2 endPos5 = new Vector2(180, 400);
+        Draw.LineColor = neonGreen;
+        Draw.LineSize = 10;
+        Draw.Line(startPos5.X, startPos5.Y, endPos5.X, endPos5.Y);
+
+        //Draw dock pillars
+        Vector2 startPos6 = new Vector2(200, 240);
+        Vector2 endPos6 = new Vector2(200, 400);
+        Draw.LineColor = neonGreen;
+        Draw.LineSize = 10;
+        Draw.Line(startPos6.X, startPos6.Y, endPos6.X, endPos6.Y);
+
+        ////Draw rectangle for dock instead cause lines kinda look goofy
+        //Vector2 startPos6 = new Vector2(200, 240);
+        //Vector2 endPos6 = new Vector2(200, 400);
+        //Draw.LineColor = neonGreen;
+        //Draw.LineSize = 10;
+        //Draw.Line(startPos6.X, startPos6.Y, endPos6.X, endPos6.Y);
 
 
         //Draw foreground waves
