@@ -24,7 +24,10 @@ public class Game
     Color neonGreen = new Color("83c16f");
 
     // Declare a variable to store the current wave color
-    Color currentWaveColor = deepBlue;
+    Color currentWaveColor = new Color("0f052d");
+    Color currentWaveColor2 = new Color("36868f");
+    Color currentWaveColor3 = new Color("3afffb");
+
 
     //Star variables
     int starCount = 40;
@@ -86,6 +89,7 @@ public class Game
         if (hasPressedSpacebar)
         {
             // Change the color to the next one in the sequence
+            //changing deepBlue
             if (currentWaveColor == deepBlue)
             {
                 currentWaveColor = teal; return;
@@ -100,6 +104,42 @@ public class Game
             }
         }
 
+        // changing teal
+        if (hasPressedSpacebar)
+        {
+            // Change the color to the next one in the sequence
+            if (currentWaveColor2 == teal)
+            {
+                currentWaveColor2 = neonBlue; return;
+            }
+            else if (currentWaveColor2 == neonBlue)
+            {
+                currentWaveColor2 = deepBlue; return;
+            }
+            else if (currentWaveColor2 == deepBlue)
+            {
+                currentWaveColor2 = teal; return;
+            }
+        }
+
+        //changing neonblue
+        if (hasPressedSpacebar)
+        {
+            // Change the color to the next one in the sequence
+            if (currentWaveColor3 == teal)
+            {
+                currentWaveColor3 = neonBlue; return;
+            }
+            else if (currentWaveColor3 == neonBlue)
+            {
+                currentWaveColor3 = deepBlue; return;
+            }
+            else if (currentWaveColor3 == deepBlue)
+            {
+                currentWaveColor3 = teal; return;
+            }
+        }
+
         // Draw furthest background waves
         Draw.FillColor = deepBlue; // deepBlue
         Draw.LineColor = almostBlack;
@@ -111,7 +151,7 @@ public class Game
         }
 
         // Draw background waves
-        Draw.FillColor = neonBlue; // navy
+        Draw.FillColor = neonBlue; // neonBlue
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         for (int i = 0; i < 16; i++)
