@@ -24,9 +24,10 @@ public class Game
     Color neonGreen = new Color("83c16f");
 
     // Declare a variable to store the current wave color
-    Color currentWaveColor = new Color("0f052d");
-    Color currentWaveColor2 = new Color("36868f");
-    Color currentWaveColor3 = new Color("3afffb");
+    Color currentWaveColor = new Color("0f052d"); // deepBlue
+    Color currentWaveColor2 = new Color("36868f"); // teal
+    Color currentWaveColor3 = new Color("3afffb"); // neonBlue
+    Color currentWaveColor4 = new Color("070918"); // deepestBlue
 
 
     //Star variables
@@ -63,11 +64,11 @@ public class Game
     public void Update()
     {
         //Draw sky
-        Window.ClearBackground(deepestBlue);
+        Window.ClearBackground(almostBlack);
 
         //Draw moon
         Draw.FillColor = neonBlue;
-        Draw.LineColor = almostBlack;
+        Draw.LineColor = deepBlue;
         Draw.LineSize = 3;
         Draw.Circle(320, 80, 50);
 
@@ -86,62 +87,30 @@ public class Game
         bool hasPressedSpacebar = Input.IsKeyboardKeyPressed(KeyboardInput.Space);
 
         // Only change the color if the space bar is pressed
+        //changing colours of waves - troubleshooting
         if (hasPressedSpacebar)
+
         {
-            // Change the color to the next one in the sequence
-            //changing deepBlue
             if (currentWaveColor == deepBlue)
             {
                 currentWaveColor = teal; return;
             }
-            else if (currentWaveColor == teal)
-            {
-                currentWaveColor = neonBlue; return;
-            }
-            else if (currentWaveColor == neonBlue)
-            {
-                currentWaveColor = deepBlue; return;
-            }
-        }
-
-        // changing teal
-        if (hasPressedSpacebar)
-        {
-            // Change the color to the next one in the sequence
             if (currentWaveColor2 == teal)
             {
                 currentWaveColor2 = neonBlue; return;
             }
-            else if (currentWaveColor2 == neonBlue)
+            if (currentWaveColor3 == neonBlue)
             {
-                currentWaveColor2 = deepBlue; return;
+                currentWaveColor3 = deepestBlue; return;
             }
-            else if (currentWaveColor2 == deepBlue)
-            {
-                currentWaveColor2 = teal; return;
-            }
-        }
-
-        //changing neonblue
-        if (hasPressedSpacebar)
-        {
-            // Change the color to the next one in the sequence
-            if (currentWaveColor3 == teal)
-            {
-                currentWaveColor3 = neonBlue; return;
-            }
-            else if (currentWaveColor3 == neonBlue)
+            if (currentWaveColor4 == deepestBlue)
             {
                 currentWaveColor3 = deepBlue; return;
-            }
-            else if (currentWaveColor3 == deepBlue)
-            {
-                currentWaveColor3 = teal; return;
             }
         }
 
         // Draw furthest background waves
-        Draw.FillColor = deepBlue; // deepBlue
+        Draw.FillColor = currentWaveColor4; // deepestBlue
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         for (int i = 0; i < 35; i++)
@@ -151,7 +120,7 @@ public class Game
         }
 
         // Draw background waves
-        Draw.FillColor = neonBlue; // neonBlue
+        Draw.FillColor = currentWaveColor3; // neonBlue
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         for (int i = 0; i < 16; i++)
@@ -161,7 +130,7 @@ public class Game
         }
 
         // Draw midground waves
-        Draw.FillColor = teal; // teal
+        Draw.FillColor = currentWaveColor2; // teal
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         for (int i = 0; i < 8; i++)
@@ -171,7 +140,7 @@ public class Game
         }
 
         // Draw foreground waves
-        Draw.FillColor = deepBlue; // deepBlue
+        Draw.FillColor = currentWaveColor; // deepBlue 
         Draw.LineColor = almostBlack;
         Draw.LineSize = 1;
         for (int i = 0; i < 4; i++)
