@@ -75,6 +75,7 @@ public class Game
         {
             int x = 12 + i * 25;
             Draw.Circle(x, Window.Height - 100, 19);
+            Draw.LineColor = almostBlack;
             Draw.LineSize = 1;
         }
 
@@ -84,20 +85,17 @@ public class Game
         {
             int x = 25 + i * 50;
             Draw.Circle(x, Window.Height - 65, 38);
+            Draw.LineColor = almostBlack;
             Draw.LineSize = 1;
         }
 
         //Draw dock platform
         Vector2 startPos = new Vector2(0, 240);
         Vector2 endPos = new Vector2(200, 240);
-        //Draw.FillColor = Color.White;
-        //Draw.LineColor = Color.White;
-        Draw.LineColor = Color.White;
+        Draw.LineColor = neonGreen;
         Draw.LineSize = 10;
         Draw.Line(startPos.X, startPos.Y, endPos.X, endPos.Y);
-        //Draw.FillColor = Color.White;
-
-        //Draw.Rectangle(0, 240, 200, 25);
+        
 
         //Draw dock platform
 
@@ -114,6 +112,7 @@ public class Game
         {
             int x = 50 + i * 100;
             Draw.Circle(x, Window.Height, 75);
+            Draw.LineColor = almostBlack;
             Draw.LineSize = 1;
         }
 
