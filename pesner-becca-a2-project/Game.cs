@@ -30,7 +30,6 @@ public class Game
 
     //Dock variables???
 
-
     /// <summary>
     ///     Setup runs once before the game loop begins.
     /// </summary>
@@ -163,51 +162,63 @@ public class Game
             Draw.Circle(x, Window.Height - 65, 38);
         }
 
+        ////Draw dock platform
+        //Vector2 startPos = new Vector2(0, 240);
+        //Vector2 endPos = new Vector2(200, 240);
+        //Draw.LineColor = neonGreen;
+        //Draw.LineSize = 10;
+        //Draw.Line(startPos.X, startPos.Y, endPos.X, endPos.Y);
+
+        ////Draw dock platform part 2
+        //Vector2 startPos2 = new Vector2(0, 260);
+        //Vector2 endPos2 = new Vector2(200, 260);
+        //Draw.LineColor = neonGreen;
+        //Draw.LineSize = 10;
+        //Draw.Line(startPos2.X, startPos2.Y, endPos2.X, endPos2.Y);
+
+        ////Draw dock pillars
+        //Vector2 startPos3 = new Vector2(80, 260);
+        //Vector2 endPos3 = new Vector2(80, 400);
+        //Draw.LineColor = neonGreen;
+        //Draw.LineSize = 10;
+        //Draw.Line(startPos3.X, startPos3.Y, endPos3.X, endPos3.Y);
+
+        ////Draw dock pillars
+        //Vector2 startPos4 = new Vector2(100, 260);
+        //Vector2 endPos4 = new Vector2(100, 400);
+        //Draw.LineColor = neonGreen;
+        //Draw.LineSize = 10;
+        //Draw.Line(startPos4.X, startPos4.Y, endPos4.X, endPos4.Y);
+
+        ////Draw dock pillars
+        //Vector2 startPos5 = new Vector2(180, 260);
+        //Vector2 endPos5 = new Vector2(180, 400);
+        //Draw.LineColor = neonGreen;
+        //Draw.LineSize = 10;
+        //Draw.Line(startPos5.X, startPos5.Y, endPos5.X, endPos5.Y);
+
+        ////Draw dock pillars
+        //Vector2 startPos6 = new Vector2(200, 240);
+        //Vector2 endPos6 = new Vector2(200, 400);
+        //Draw.LineColor = neonGreen;
+        //Draw.LineSize = 10;
+        //Draw.Line(startPos6.X, startPos6.Y, endPos6.X, endPos6.Y);
+
+        //Draw rectangle for dock instead cause lines kinda look goofy
+
         //Draw dock platform
-        Vector2 startPos = new Vector2(0, 240);
-        Vector2 endPos = new Vector2(200, 240);
-        Draw.LineColor = neonGreen;
-        Draw.LineSize = 10;
-        Draw.Line(startPos.X, startPos.Y, endPos.X, endPos.Y);
+        Draw.FillColor = neonGreen;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
+        Draw.Rectangle(0, 245, 200, 15);
 
-        //Draw dock platform part 2
-        Vector2 startPos2 = new Vector2(0, 260);
-        Vector2 endPos2 = new Vector2(200, 260);
-        Draw.LineColor = neonGreen;
-        Draw.LineSize = 10;
-        Draw.Line(startPos2.X, startPos2.Y, endPos2.X, endPos2.Y);
 
-        //Draw dock pillars
-        Vector2 startPos3 = new Vector2(80, 260);
-        Vector2 endPos3 = new Vector2(80, 400);
-        Draw.LineColor = neonGreen;
-        Draw.LineSize = 10;
-        Draw.Line(startPos3.X, startPos3.Y, endPos3.X, endPos3.Y);
-
-        //Draw dock pillars
-        Vector2 startPos4 = new Vector2(100, 260);
-        Vector2 endPos4 = new Vector2(100, 400);
-        Draw.LineColor = neonGreen;
-        Draw.LineSize = 10;
-        Draw.Line(startPos4.X, startPos4.Y, endPos4.X, endPos4.Y);
-
-        //Draw dock pillars
-        Vector2 startPos5 = new Vector2(180, 260);
-        Vector2 endPos5 = new Vector2(180, 400);
-        Draw.LineColor = neonGreen;
-        Draw.LineSize = 10;
-        Draw.Line(startPos5.X, startPos5.Y, endPos5.X, endPos5.Y);
-
-        //Draw dock pillars
-        Vector2 startPos6 = new Vector2(200, 240);
-        Vector2 endPos6 = new Vector2(200, 400);
-        Draw.LineColor = neonGreen;
-        Draw.LineSize = 10;
-        Draw.Line(startPos6.X, startPos6.Y, endPos6.X, endPos6.Y);
-
-        ////Draw rectangle for dock instead cause lines kinda look goofy
-        //Draw.Rectangle(0, 200, 200, 25);
-
+        //Draw dock pillars T_T idk what i'm doing wrong
+        Draw.FillColor = neonGreen;
+        Draw.LineColor = almostBlack;
+        Draw.LineSize = 1;
+        Draw.Rectangle(180, 240, 15, 240);
+       
 
         //Draw foreground waves
         Draw.FillColor = deepBlue;
