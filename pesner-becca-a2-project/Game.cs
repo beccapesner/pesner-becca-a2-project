@@ -69,6 +69,70 @@ public class Game
             Draw.LineSize = 1;
         }
 
+        //// Declare a variable to store the current wave color
+        //Color currentWaveColor = deepBlue;
+
+        //// Check if the space bar is pressed
+        //bool hasPressedSpacebar = Input.IsKeyboardKeyPressed(KeyboardInput.Space);
+
+        //// Only change the color if the space bar is pressed
+        //if (hasPressedSpacebar)
+        //{
+        //    // Change the color to the next one in the sequence
+        //    if (currentWaveColor == deepBlue)
+        //    {
+        //        currentWaveColor = navy;
+        //    }
+        //    else if (currentWaveColor == navy)
+        //    {
+        //        currentWaveColor = teal;
+        //    }
+        //    else if (currentWaveColor == teal)
+        //    {
+        //        currentWaveColor = deepBlue;
+        //    }
+        //}
+
+        //// Draw furthest background waves
+        //Draw.FillColor = currentWaveColor; // deepBlue
+        //Draw.LineColor = almostBlack;
+        //Draw.LineSize = 1;
+        //for (int i = 0; i < 35; i++)
+        //{
+        //    int x = 6 + i * 12;
+        //    Draw.Circle(x, Window.Height - 120, 14);
+        //}
+
+        //// Draw background waves
+        //Draw.FillColor = currentWaveColor; // navy
+        //Draw.LineColor = almostBlack;
+        //Draw.LineSize = 1;
+        //for (int i = 0; i < 16; i++)
+        //{
+        //    int x = 12 + i * 25;
+        //    Draw.Circle(x, Window.Height - 100, 19);
+        //}
+
+        //// Draw midground waves
+        //Draw.FillColor = currentWaveColor; // teal
+        //Draw.LineColor = almostBlack;
+        //Draw.LineSize = 1;
+        //for (int i = 0; i < 8; i++)
+        //{
+        //    int x = 25 + i * 50;
+        //    Draw.Circle(x, Window.Height - 65, 38);
+        //}
+
+        //// Draw foreground waves
+        //Draw.FillColor = currentWaveColor; // deepBlue
+        //Draw.LineColor = almostBlack;
+        //Draw.LineSize = 1;
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    int x = 50 + i * 100;
+        //    Draw.Circle(x, Window.Height, 75);
+        //}
+
         //Draw furthest background waves
         Draw.FillColor = deepBlue;
         Draw.LineColor = almostBlack;
@@ -142,11 +206,7 @@ public class Game
         Draw.Line(startPos6.X, startPos6.Y, endPos6.X, endPos6.Y);
 
         ////Draw rectangle for dock instead cause lines kinda look goofy
-        //Vector2 startPos6 = new Vector2(200, 240);
-        //Vector2 endPos6 = new Vector2(200, 400);
-        //Draw.LineColor = neonGreen;
-        //Draw.LineSize = 10;
-        //Draw.Line(startPos6.X, startPos6.Y, endPos6.X, endPos6.Y);
+        //Draw.Rectangle(0, 200, 200, 25);
 
 
         //Draw foreground waves
